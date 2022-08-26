@@ -24,7 +24,9 @@ const Product = ({products}) => {
                             </div>
 
                             <div className="media-content">
+                                <Link to={`/products/${product._id}`}>
                                 <p className="title is-4">{product.name}</p>
+                                </Link>
                                 <Rating value={product.rating} text={`${product.numReviews} reviews`} color={'#f8e825'} />
                                 <p className="subtitle is-6">${product.price}.00</p>
                             </div>
