@@ -1,9 +1,20 @@
 import React from 'react'
-import products from '../products.js'
 import {Link} from 'react-router-dom'
 import Product from '../components/Product.js'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 
 const HomePage = () => {
+    const [products, setProducts] = useState([])
+
+    useEffect(() => {
+        async function getProducts(){
+            const {data} = await axios.get('http://127.0.0.1:8000/api/products/')
+            setProducts(data)
+        } 
+
+        getProducts()
+    }, [])
     return(
         <div>
             <h2>LATEST AND GREATEST</h2>
