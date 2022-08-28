@@ -1,24 +1,37 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 import Rating from '../components/Rating.js'
 import {useParams} from 'react-router'
-import products from '../products.js'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
-const ProductPage = ({match}) => {
+const ProductPage = () => {
 
+  const [product, setProduct] = useState([])
+  const {id} = useParams()
+
+
+
+  useEffect(() => {
+      async function getProduct(){
+          const response = await axios.get(`http://127.0.0.1:8000/api/products/${id}`)
+          setProduct(response.data)
+      } 
+
+      getProduct()
+  }, [])
     // const {_id} = useParams() 
-    const product = products.find((p) => p._id ==  match.params.id)
     return (
     <div>
         <div className='imgholder'>
-        {/* <img className='imgcard' src={item.photo_1_url} /> */}
+        <img className='imgcard' src={product.image} />
         {/* <img className='imgcard' src={item.photo_2_url} /> */}
       </div>
       <div class="card">
         <div class="card-content">
           <div class="media">
             <div class="media-content">
-              {/* <p class="title is-4">{item.name}</p> */}
+              <p class="title is-4">{product.name}</p>
               {/* <p class="subtitle is-6">${item.price}.00</p> */}
             </div>
           </div>

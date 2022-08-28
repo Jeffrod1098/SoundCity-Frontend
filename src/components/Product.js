@@ -13,7 +13,7 @@ const Product = ({products}) => {
                 <div className="card ">
                     <div className="card-image">
                         <figure className="image is-square">
-                            <Link to={`/products/${product._id}`}>
+                            <Link to={`product/${product._id}`}>
                             <img src={product.image} alt="Placeholder image" />
                             </Link>
                         </figure>
@@ -24,7 +24,7 @@ const Product = ({products}) => {
                             </div>
 
                             <div className="media-content">
-                                <Link to={`/products/${product._id}`}>
+                                <Link to={`/product/${product._id}`}>
                                 <p className="title is-4">{product.name}</p>
                                 </Link>
                                 <Rating value={product.rating} text={`${product.numReviews} reviews`} color={'#f8e825'} />
