@@ -6,7 +6,7 @@ import Rating from '../components/Rating.js'
 const Product = ({products}) => {
     return(
         <div>
-            <div className='cardContainer'>
+            <div className='cardContainer '>
             {products.map((product) => {
                 return( 
                 <div key={product._id} className="cards">
