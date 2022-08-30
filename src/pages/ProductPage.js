@@ -26,23 +26,15 @@ const ProductPage = () => {
       <div className='column content'>
         <h1>{product.name}</h1>
         <img src={product.image}/>
-        <div className='box'></div>
 
       </div>
       {/* <div className='column is-narrow'></div> */}
-      <div className='column is-3 content'>
-        <div className='box'></div>
+      <div className='column is-3 content '>
         <h3>Price:   ${product.price}</h3>
         <h3>How many in stock: {product.countInStock}</h3>
-        <Rating value={product.rating} text={`${product.numReviews} reviews`} color={'#f8e825'} />
-        <div className='box'></div>
-
-        <h3>Description: {product.description}</h3>
-        <div className='box'></div>
-
+          <Rating value={product.rating} text={`${product.numReviews} reviews`} color={'#f8e825'} />
+        <div className='box'><h3>Description: {product.description}</h3></div>
         <button className="button is-medium is-fullwidth is-dark">Add To Cart</button>
-        <div className='box'></div>
-
       </div>
       <div className='column is-2'></div>
     </div>
