@@ -2,20 +2,18 @@ import React from 'react'
 
 import Rating from '../components/Rating.js'
 import {useParams} from 'react-router'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { listProductDetails } from '../actions/productActions.js' 
 
 const ProductPage = () => {
-
   const dispatch = useDispatch()
   const {id} = useParams()
   const productDetails = useSelector(state => state.productDetails)
   const {loading, error, product} = productDetails
-
   useEffect(() => {
     dispatch(listProductDetails(id))
-  }, [dispatch, id])
+  }, [])
 
 
     return (
