@@ -2,19 +2,18 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import Product from '../components/Product.js'
 import { useState, useEffect } from 'react'
-import axios from 'axios'
+import { useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
+import { listProducts } from '../actions/productActions.js'
 
 const HomePage = () => {
-    const [products, setProducts] = useState([])
-
+    const dispatch = useDispatch()
     useEffect(() => {
-        async function getProducts(){
-            const {data} = await axios.get('http://127.0.0.1:8000/api/products/')
-            setProducts(data)
-        } 
+        dispatch(listProducts())
 
-        getProducts()
     }, [])
+
+    const products = []
     return(
         <div>
             <h2>LATEST AND GREATEST</h2>
