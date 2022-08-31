@@ -6,7 +6,8 @@ import React from 'react'
 import HomePage from './pages/HomePage.js'
 import ProductPage from './pages/ProductPage.js'
 import {Route, Routes, Link} from 'react-router-dom'
-import { LoginPage } from './pages/LoginPage';
+
+
 
 function App() {
   return (

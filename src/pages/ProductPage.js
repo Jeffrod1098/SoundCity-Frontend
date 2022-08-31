@@ -7,9 +7,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import { listProductDetails } from '../actions/productActions.js' 
 
 const ProductPage = () => {
+
   const dispatch = useDispatch()
+  
   const {id} = useParams()
+
   const productDetails = useSelector(state => state.productDetails)
+
   const {loading, error, product} = productDetails
   useEffect(() => {
     dispatch(listProductDetails(id))
