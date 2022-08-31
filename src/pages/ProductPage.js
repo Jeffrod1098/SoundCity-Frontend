@@ -3,23 +3,19 @@ import React from 'react'
 import Rating from '../components/Rating.js'
 import {useParams} from 'react-router'
 import { useEffect, useState } from 'react'
-import axios from 'axios'
+import { useDispatch, useSelector } from 'react-redux'
+import { listProductDetails } from '../actions/productActions.js' 
 
 const ProductPage = () => {
-
-  const [product, setProduct] = useState([])
+  const dispatch = useDispatch()
   const {id} = useParams()
-
-
-
+  const productDetails = useSelector(state => state.productDetails)
+  const {loading, error, product} = productDetails
   useEffect(() => {
-      async function getProduct(){
-          const response = await axios.get(`http://127.0.0.1:8000/api/products/${id}`)
-          setProduct(response.data)
-      } 
-
-      getProduct()
+    dispatch(listProductDetails(id))
   }, [])
+
+
     return (
     <div className='columns productPage'>
       <div className='column is-2'></div>
