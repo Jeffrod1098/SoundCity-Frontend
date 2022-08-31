@@ -1,20 +1,14 @@
 import React from "react";
-import { useState } from "react";
-
-export const LoginPage = () => {
-
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
 
 
-
+const LoginPage = () => {
 
     return (
         <div className="form">
-            <h1>LOGIN</h1>
-            <div className="container has-text-centered box" style={{ maxWidth: '300px' }}>
+            {/* <h1>LOGIN</h1>
+            <div className="container has-text-centered box" style={{ maxWidth: '300px' }}> */}
                 {/* <form onSubmit={submit}> */}
-                <form >
+                {/* <form >
 
                     <div className="field">
                         <label className="label" >Username</label>
@@ -36,7 +30,7 @@ export const LoginPage = () => {
                         </div>
                     </div>
                 </form>
-            </div>
+            </div> */}
         </div>
     )
 }

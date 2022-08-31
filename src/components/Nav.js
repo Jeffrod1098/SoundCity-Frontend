@@ -27,14 +27,12 @@ const Nav = () => {
                         <div className="navbar-end">
                             <div className="navbar-item">
                                 <div className="buttons">
-                                    <Link to='/login'>
                                         <div className="button is-light">
                                             <div className='icon is-small'>
                                                 <FaUser />
                                             </div>
                                             <strong>Login</strong>
                                         </div>
-                                    </Link>
                                     <div>
                                     </div>
 
