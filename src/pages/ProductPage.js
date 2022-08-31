@@ -10,11 +10,13 @@ const ProductPage = () => {
 
   const dispatch = useDispatch()
   
-  const {id} = useParams()
-
   const productDetails = useSelector(state => state.productDetails)
 
+  const {id} = useParams()
+
+
   const {loading, error, product} = productDetails
+
   useEffect(() => {
     dispatch(listProductDetails(id))
   }, [])
