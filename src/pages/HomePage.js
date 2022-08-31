@@ -8,16 +8,19 @@ import { listProducts } from '../actions/productActions.js'
 
 const HomePage = () => {
     const dispatch = useDispatch()
+    const productList = useSelector(state => state.productList)
+    const {error, loading, products} = productList
     useEffect(() => {
         dispatch(listProducts())
 
-    }, [])
+    }, [dispatch])
 
-    const products = []
     return(
         <div>
+
             <h2>LATEST AND GREATEST</h2>
-            <Product products={products}/>
+            {loading? <h2>LOADING...</h2> : error ? <h2>{error}</h2>: <Product products={products}/>}
+
         </div>
         
     )
