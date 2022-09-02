@@ -5,8 +5,10 @@ import { useParams } from 'react-router'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { listProductDetails } from '../actions/productActions.js'
-
+import { createBrowserHistory } from 'history'
 const ProductPage = () => {
+
+  const history = createBrowserHistory()
 
   const [qty, setQty] = useState(1)
 
@@ -24,7 +26,7 @@ const ProductPage = () => {
   }, [])
 
   const addToCartHandler = () => {
-    console.log('add to cart', id)
+    history.push(`/cart/${id}?qty=${qty}`)
   }
 
   return (
