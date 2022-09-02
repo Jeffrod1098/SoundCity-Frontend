@@ -23,6 +23,9 @@ const ProductPage = () => {
     dispatch(listProductDetails(id))
   }, [])
 
+  const addToCartHandler = () => {
+    console.log('add to cart', id)
+  }
 
   return (
     <div className='columns productPage'>
@@ -40,30 +43,30 @@ const ProductPage = () => {
         <div className='box'><h3>Description: {product.description}</h3></div>
         <div>
           {product.countInStock > 0 && (
-            <div class="dropdown is-hoverable">
-              <div class="dropdown-trigger">
-                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+            <div className="dropdown is-hoverable">
+              <div className="dropdown-trigger">
+                <button className="button" aria-haspopup="true" aria-controls="dropdown-menu4">
                   <span>Qty</span>
-                  <span class="icon is-small">
-                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  <span className="icon is-small">
+                    <i className="fas fa-angle-down" aria-hidden="true"></i>
                   </span>
                 </button>
               </div>
-              <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                <div class="dropdown-content">
-                  <a class="dropdown-item">
+              <div className="dropdown-menu" id="dropdown-menu4" role="menu">
+                <div className="dropdown-content">
+                  <a className="dropdown-item">
                      <strong>1</strong> 
                   </a>
-                  <a class="dropdown-item">
+                  <a className="dropdown-item">
                     <strong>2</strong> 
                   </a>
-                  <a class="dropdown-item">
+                  <a className="dropdown-item">
                      <strong>3</strong> 
                   </a>
-                  <a class="dropdown-item">
+                  <a className="dropdown-item">
                     <strong>4</strong> 
                   </a>
-                  <a class="dropdown-item">
+                  <a className="dropdown-item">
                     <strong>5</strong> 
                   </a>
                 </div>
@@ -71,7 +74,7 @@ const ProductPage = () => {
             </div>
           )}
         </div>
-        <button className="button is-medium is-fullwidth is-dark">Add To Cart</button>
+        <button onClick={addToCartHandler} className="button is-medium is-fullwidth is-dark">Add To Cart</button>
       </div>
       <div className='column is-2'></div>
     </div>
