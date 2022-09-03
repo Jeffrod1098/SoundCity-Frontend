@@ -4,10 +4,12 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import {createStore} from 'redux'
 import {productListReducer} from './reducers/productReducers'
 import { productDetailReducer } from './reducers/productReducers'
+import { cartReducer } from './reducers/cartReducers'
 
 const reducer = combineReducers({
     productList: productListReducer,
     productDetails : productDetailReducer,
+    cart : cartReducer,
 })
 
 const initialState = {}
