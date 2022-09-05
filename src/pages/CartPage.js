@@ -8,10 +8,12 @@ import { useParams } from "react-router-dom"
 
 const CartPage = ({Location}) => {
 
+
     const { id } = useParams()
     // const qty = 1 ? Location.search.split('=') : 1
     const qty = 1
     console.log('qty:', qty)
+
 
     return(
         <div>

@@ -20,19 +20,28 @@ const Nav = () => {
                             <div className="navbar-item">
                                 <div className="buttons">
                                         <div className="button is-light">
+                                    <Link to='/login'>
                                             <div className='icon is-small'>
+
                                                 <FaUser />
+
                                             </div>
                                             <strong>Login</strong>
+                                    </Link>
+
                                         </div>
+
                                     <div>
                                     </div>
 
                                     <div className='button is-light'>
+                                        <Link to='/cart/id?'>
+
                                         <div className='icon is-small'>
                                             <FaShoppingCart />
                                         </div>
                                         <strong>Cart</strong>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
