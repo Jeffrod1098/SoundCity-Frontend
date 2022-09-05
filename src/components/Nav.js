@@ -5,21 +5,13 @@ import { Link } from 'react-router-dom'
 
 const Nav = () => {
     return (
-        <div>
-            <div>
+            <div className='navPushDown'>
                 <nav className='navbar is-danger is-fixed-top'>
                     <div className='navbar-brand'>
                         <Link to='/' className='navbar-item'>
                             <FaHeadphonesAlt />
                             SOUND CITY
                         </Link>
-
-                        {/* <div className="navbar-item"> */}
-                        {/* <Link to='/postT'> */}
-                        {/* POST A T */}
-                        {/* </Link> */}
-                        {/* </div> */}
-
 
 
                     </div>
@@ -48,7 +40,6 @@ const Nav = () => {
                     </div>
                 </nav>
             </div>
-        </div>
     )
 }
 

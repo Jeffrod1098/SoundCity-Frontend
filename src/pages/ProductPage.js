@@ -10,7 +10,9 @@ const ProductPage = () => {
 
   const history = createBrowserHistory()
 
-  const [qty, setQty] = useState(1)
+  // const [qty, setQty] = useState(1)
+
+  const qty = 1
 
   const dispatch = useDispatch()
 
