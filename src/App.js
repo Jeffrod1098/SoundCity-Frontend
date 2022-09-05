@@ -18,7 +18,7 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage/>}/>
           <Route path='/product/:id' element={<ProductPage/>} />
-          <Route path='/cart/:id?' component ={<CartPage/>} />
+          <Route path='/cart/:id' element ={<CartPage/>} />
           <Route path='/login' element={<LoginPage/>} />
         </Routes>
       </main>
