@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { addToCart } from "../actions/cartActions"
@@ -6,14 +6,18 @@ import { useParams } from "react-router-dom"
 
 
 
-const CartPage = ({Location}) => {
+const CartPage = () => {
 
-
+    const dispatch = useDispatch()
     const { id } = useParams()
-    // const qty = 1 ? Location.search.split('=') : 1
     const qty = 1
-    console.log('qty:', qty)
 
+    useEffect(() => {
+        if(id){
+            dispatch(addToCart(id, qty))
+        }
+
+    },[dispatch, id, qty])
 
     return(
         <div>
