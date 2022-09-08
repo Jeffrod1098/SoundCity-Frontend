@@ -14,7 +14,6 @@ const CartPage = () => {
 
     const cart = useSelector(state => state.cart)
     const { cartItems } = cart
-    console.log(cartItems)
     useEffect(() => {
         if (id) {
             dispatch(addToCart(id, qty))
@@ -24,8 +23,15 @@ const CartPage = () => {
 
     return (
         <div className="columns">
-            <div className="column is-2"></div>
-            <div className="card column is-8">
+            <div className="column is-1">
+                <h2>Cart</h2>
+            </div>
+            {cartItems.length === 0 ? (
+                <div>
+                    <h2>Your cart is currently empty</h2>
+                </div>
+            ): (
+                <div className="card column is-7">
                 <div className="card-content">
                     <div className="media">
                         <div className="media-left">
@@ -49,7 +55,9 @@ const CartPage = () => {
                     </div>
                 </div>
             </div>
-            <div className="column is-2"></div>
+            )}
+
+            <div className="column is-4"></div>
         </div>
     )
 }
