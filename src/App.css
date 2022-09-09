@@ -34,3 +34,7 @@
   align-content: space-around;
   flex-wrap: wrap;
 }
+
+.cartCards{
+  margin-top: 1%;
+}

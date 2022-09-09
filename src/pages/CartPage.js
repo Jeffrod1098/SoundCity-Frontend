@@ -32,7 +32,7 @@ const CartPage = () => {
                     <h2>Your cart is currently empty</h2>
                 </div>
             ) : (cartItems.map(item => (
-                <div className="card column is-7">
+                <div className="card column is-7 cartCards">
                     <div className="card-content">
                         <div className="media">
                             <div className="media-left">
