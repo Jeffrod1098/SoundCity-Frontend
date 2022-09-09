@@ -26,3 +26,11 @@
 .navPushDown{
   padding-bottom: 3%;
 }
+
+.cartCardContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-content: space-around;
+  flex-wrap: wrap;
+}

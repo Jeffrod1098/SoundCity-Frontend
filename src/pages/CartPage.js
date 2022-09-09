@@ -23,7 +23,7 @@ const CartPage = () => {
     console.log(cartItems)
 
     return (
-        <div className="columns">
+        <div className="columns cartCardContainer">
             <div className="column is-1">
                 <h2>Cart</h2>
             </div>
