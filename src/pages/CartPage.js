@@ -48,15 +48,7 @@ const CartPage = () => {
 
                             <div>
                                 <p className="subtitle is-6">${item.price}</p>
-                            </div>
-
-                        </div>
-
-                        <div className="content">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                            <a href="#">#css</a> <a href="#">#responsive</a>
-                            <button className="button is-light">
+                                <button className="button is-light deleteButton">
                                 <div className="icon is-small">
                                     <FaTrashAlt />
                                 </div>
@@ -64,8 +56,11 @@ const CartPage = () => {
                                     remove
                                 </div>
                             </button>
-                            <br />
+                            </div>
+
                         </div>
+
+
                     </div>
                 </div>
             ))
