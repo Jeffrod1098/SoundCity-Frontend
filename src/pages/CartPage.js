@@ -22,17 +22,21 @@ const CartPage = () => {
     }, [dispatch, id, qty])
     console.log(cartItems)
 
+    const removeFromCartHander = (id) => {
+        console.log('remove:', id)
+    }
+
     return (
-        <div className="columns cartCardContainer">
+        <div className="columns ">
             <div className="column is-1">
                 <h2>Cart</h2>
             </div>
+            <div className=" card column is-7">
             {cartItems.length === 0 ? (
                 <div>
                     <h2>Your cart is currently empty</h2>
                 </div>
             ) : (cartItems.map(item => (
-                <div className="card column is-7 cartCards">
                     <div className="card-content">
                         <div className="media">
                             <div className="media-left">
@@ -48,28 +52,36 @@ const CartPage = () => {
 
                             <div>
                                 <p className="subtitle is-6">${item.price}</p>
-                                <button className="button is-light deleteButton">
-                                <div className="icon is-small">
-                                    <FaTrashAlt />
-                                </div>
-                                <div>
-                                    remove
-                                </div>
-                            </button>
+                                <button className="button is-light deleteButton" onClick={() => removeFromCartHander(item.product)}>
+                                    <div className="icon is-small">
+                                        <FaTrashAlt />
+                                    </div>
+                                    <div>
+                                        remove
+                                    </div>
+                                </button>
                             </div>
 
                         </div>
 
 
                     </div>
-                </div>
             ))
-
-
-
             )}
+            </div>
+            
 
-            <div className="column is-4"></div>
+            <div className="column is-3">
+                <div className="card">
+                    <div className="card-content">
+                    <div className="title">SUBTOTAL:</div>
+                        <div className="content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="column is-1">
+            </div>
         </div>
     )
 }
