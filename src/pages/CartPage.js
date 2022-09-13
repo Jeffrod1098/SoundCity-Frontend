@@ -74,10 +74,14 @@ const CartPage = () => {
             <div className="column is-3">
                 <div className="card">
                     <div className="card-content">
-                    <div className="title">SUBTOTAL:</div>
+                    <div className="title">SUBTOTAL: </div>
                         <div className="content">
+                            ${cartItems.reduce((acc, item) => acc + item.qty * item.price,0)} ({cartItems.reduce((acc, item) => acc + item.qty, 0 )})Items
                         </div>
                     </div>
+                    <button className="button is-dark checkoutBtn is-large is-fullwidth">
+                        <h1>CHECKOUT</h1>
+                    </button>
                 </div>
             </div>
             <div className="column is-1">
