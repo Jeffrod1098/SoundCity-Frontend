@@ -31,13 +31,13 @@ const CartPage = () => {
             <div className="column is-1">
                 <h2>Cart</h2>
             </div>
-            <div className=" card column is-7">
+            <div className=" column is-7">
             {cartItems.length === 0 ? (
                 <div>
                     <h2>Your cart is currently empty</h2>
                 </div>
             ) : (cartItems.map(item => (
-                    <div className="card-content">
+                    <div className="card-content card">
                         <div className="media">
                             <div className="media-left">
                                 <figure className="image is-128x128">
