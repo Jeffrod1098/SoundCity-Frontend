@@ -29,6 +29,7 @@ const ProductPage = () => {
 
   const addToCartHandler = () => {
     history.push(`/cart/${id}?qty=${qty}`)
+    window.location.reload()
   }
 
   return (
