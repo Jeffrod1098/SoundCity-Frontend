@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { addToCart } from "../actions/cartActions"
 import { useParams } from "react-router-dom"
 import { FaTrashAlt } from "react-icons/fa"
-
+import { removeFromCart } from "../actions/cartActions"
 
 
 const CartPage = () => {
@@ -23,7 +23,7 @@ const CartPage = () => {
     console.log(cartItems)
 
     const removeFromCartHander = (id) => {
-        console.log('remove:', id)
+        dispatch(removeFromCart(id))
     }
 
     return (
