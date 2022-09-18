@@ -31,11 +31,6 @@ const Product = ({products}) => {
                                 <p className="subtitle is-6">${product.price}.00</p>
                             </div>
                         </div>
-
-                        <footer className="card-footer">
-                                {/* <div href="#" className="card-footer-item">leave a review</div> */}
-                            <a href="#" className="card-footer-item">Add to Cart</a>
-                        </footer>
                     </div>
                 </div>
             </div>)
