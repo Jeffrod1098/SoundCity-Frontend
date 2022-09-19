@@ -1,71 +1,27 @@
-# Getting Started with Create React App
+### Project Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a mock webstore, for an "Audio store", that lets the admin control, what items to post, remove, edit, and delete. This mock web store will let users log in, and add stuff to their cart and leave reviews and view reviews on the headphones. Carts will also be saved using local storage.
 
-## Available Scripts
+### Wire Frame
 
-In the project directory, you can run:
+![Screen Shot 2022-09-19 at 12 22 07 PM](https://user-images.githubusercontent.com/102834324/191066539-84352064-2c90-4e1b-b81d-2ce2ccf27398.png)
 
-### `npm start`
+### User Stories
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+As a user I would like to be able to sign in, and be able to navigate easily throughout the web-store. Also I would like to be able to add the headphones I like to my cart. I would also like to leave, edit, and delete comments on the headphones that I like. In my cart I want the sum of the headphones to be given, with the amount of items.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Technologies Used
 
-### `npm test`
+Python, Django, Javascript, React.JS, Redux, Bulma, HTML, and CSS.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Goals 
 
-### `npm run build`
+Have a landing page where user can easily navigate to their next decision. Nav bar that is fixed to the top of the screen. Have users/ with user authentication where, their carts are saved, items can be put and taken out of your cart. Reviews can be left on certain items. Give the subtotal of the audio equipement in the cart, and a carts page where it displays all the item’s in your cart.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Preview 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img width="1713" alt="Screen Shot 2022-09-19 at 12 22 31 PM" src="https://user-images.githubusercontent.com/102834324/191067108-f08bf88f-007a-4f06-8d9f-fd0c8d665a6f.png">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# webStoreFrontend
+### What's left?
+Project is still a work in progress.
