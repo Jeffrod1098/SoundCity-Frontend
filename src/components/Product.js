@@ -12,7 +12,7 @@ const Product = ({products}) => {
                 <div key={product.id} className="cards">
                 <div className="card ">
                     <div className="card-image">
-                        <figure className="image is-square">
+                        <figure className="image is-4by5">
                             <Link to={`product/${product.id}`}>
                             <img src={product.image} alt="Placeholder image" />
                             </Link>
