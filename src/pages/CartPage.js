@@ -40,7 +40,7 @@ const CartPage = () => {
                     <div className="card-content card">
                         <div className="media">
                             <div className="media-left">
-                                <figure className="image is-128x128">
+                                <figure className="image is-64x64">
                                     <img src={item.image} />
                                 </figure>
                             </div>
