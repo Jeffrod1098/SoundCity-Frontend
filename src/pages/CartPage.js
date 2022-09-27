@@ -29,7 +29,7 @@ const CartPage = () => {
     return (
         <div className="columns ">
             <div className="column is-1">
-                <h2>Cart</h2>
+                <h2 className="title is-2"> Your Cart </h2>
             </div>
             <div className=" column is-7">
             {cartItems.length === 0 ? (

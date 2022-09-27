@@ -17,10 +17,7 @@ const HomePage = () => {
 
     return(
         <div>
-
-            <h2>LATEST AND GREATEST</h2>
             {loading? <h2>LOADING...</h2> : error ? <h2>{error}</h2>: <Product products={products}/>}
-
         </div>
         
     )
