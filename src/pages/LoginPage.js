@@ -12,7 +12,7 @@ const LoginPage = () => {
     return (
         <div>
         <div className='form'>
-            <h1 className="title is-2">LOGIN</h1>
+            {/* <h1 className="title is-2"></h1> */}
             <div className="container has-text-centered box" style={{ maxWidth: '300px' }}>
                 <form>
                     <div className="field">
