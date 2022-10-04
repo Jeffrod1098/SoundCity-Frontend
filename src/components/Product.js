@@ -9,8 +9,8 @@ const Product = ({products}) => {
             <div className='cardContainer '>
             {products.map((product) => {
                 return(
-                <Link to={`product/${product.id}`}> 
                 <div key={product.id} className="cards">
+                <Link to={`product/${product.id}`}> 
                 <div className="card ">
                     <div className="card-image">
                         <figure className="image is-4by5">
@@ -34,8 +34,8 @@ const Product = ({products}) => {
                         </div>
                     </div>
                 </div>
-            </div>
             </Link>
+            </div>
             )
             })}
         </div>
