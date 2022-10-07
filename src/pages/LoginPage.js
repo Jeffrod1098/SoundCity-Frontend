@@ -4,31 +4,33 @@ import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { login } from "../actions/userActions"
 import { createBrowserHistory } from "history"
-
+import { useLocation } from "react-router-dom"
 
 const LoginPage = () => {
 
     const history = createBrowserHistory()
+    const location = useLocation()
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
     const dispatch = useDispatch()
 
-    const submitHandler = (e) => {
+    const onClickHandler = (e) => {
         e.preventDefault()
         dispatch(login(email, password))
-        console.log('submitted')
     }
 
-    const redirect = Location.search ? Location.search.split('=')[1] : '/'
+    // const redirect = '/'
+    const redirect = location.search ? location.search.split('=')[1] : '/'
+
 
     const userLogin = useSelector(state => state.userLogin)
     const {error, loading, userInfo} = userLogin
 
     useEffect(() => {
         if(userInfo){
-            history.push(redirect)
+            history.push('/')
         }
     }, [history, userInfo, redirect])
 
@@ -36,9 +38,9 @@ const LoginPage = () => {
     return (
         <div>
         <div className='form'>
-            {/* <h1 className="title is-2"></h1> */}
+            <h1 className="title is-2"></h1>
             <div className="container has-text-centered box" style={{ maxWidth: '300px' }}>
-                <form onSubmit={submitHandler}>
+                <form>
                     <div className="field">
                         <label className="label" >Username</label>
                         <div className="control">
@@ -55,7 +57,7 @@ const LoginPage = () => {
 
                     <div className="field">
                         <div className="control buttons is-centered">
-                            <input className="button is-medium is-info is-fullwidth" type="submit" value="LOGIN"/>
+                            <input onClick={onClickHandler} className="button is-medium is-info is-fullwidth" type="submit" value="LOGIN"/>
                         </div>
                     </div>
                 </form>
