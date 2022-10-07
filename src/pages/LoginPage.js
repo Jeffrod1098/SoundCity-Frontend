@@ -3,16 +3,34 @@ import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { login } from "../actions/userActions"
+import { createBrowserHistory } from "history"
+
 
 const LoginPage = () => {
+
+    const history = createBrowserHistory()
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
+    const dispatch = useDispatch()
+
     const submitHandler = (e) => {
         e.preventDefault()
+        dispatch(login(email, password))
         console.log('submitted')
     }
+
+    const redirect = Location.search ? Location.search.split('=')[1] : '/'
+
+    const userLogin = useSelector(state => state.userLogin)
+    const {error, loading, userInfo} = userLogin
+
+    useEffect(() => {
+        if(userInfo){
+            history.push(redirect)
+        }
+    }, [history, userInfo, redirect])
 
 
     return (
@@ -43,7 +61,7 @@ const LoginPage = () => {
                 </form>
 
             </div>
-            <Link to={'/register'}>
+            <Link to={redirect ? `register?redirect=${redirect}` : '/register'}>
             <div className="has-text-centered">Click here to register</div>            
             </Link>
 
