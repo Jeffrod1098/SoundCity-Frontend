@@ -4,25 +4,33 @@ import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { login } from "../actions/userActions"
 import { createBrowserHistory } from "history"
+import { HistoryRouterProps } from "react-router-dom"
+import { unstable_HistoryRouter } from "react-router-dom"
+// import { createHashHistory } from "history"
 import { useLocation } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 const LoginPage = () => {
 
-    const history = createBrowserHistory()
+    // const history = createBrowserHistory()
+    // const history = unstable_HistoryRouter()
+
     const location = useLocation()
+    const navigate = useNavigate()
+
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
     const dispatch = useDispatch()
 
-    const onClickHandler = (e) => {
+    const onSubmitHandler = (e) => {
         e.preventDefault()
         dispatch(login(email, password))
     }
 
-    // const redirect = '/'
-    const redirect = location.search ? location.search.split('=')[1] : '/'
+    const redirect = '/'
+    // const redirect = location.search ? location.search.split('=')[1] : '/'
 
 
     const userLogin = useSelector(state => state.userLogin)
@@ -30,9 +38,9 @@ const LoginPage = () => {
 
     useEffect(() => {
         if(userInfo){
-            history.push('/')
+            navigate(redirect)
         }
-    }, [history, userInfo, redirect])
+    }, [userInfo, redirect])
 
 
     return (
@@ -40,7 +48,7 @@ const LoginPage = () => {
         <div className='form'>
             <h1 className="title is-2"></h1>
             <div className="container has-text-centered box" style={{ maxWidth: '300px' }}>
-                <form>
+                <form onSubmit={onSubmitHandler}>
                     <div className="field">
                         <label className="label" >Username</label>
                         <div className="control">
@@ -57,7 +65,7 @@ const LoginPage = () => {
 
                     <div className="field">
                         <div className="control buttons is-centered">
-                            <input onClick={onClickHandler} className="button is-medium is-info is-fullwidth" type="submit" value="LOGIN"/>
+                            <input className="button is-medium is-info is-fullwidth" type="submit" value="LOGIN"/>
                         </div>
                     </div>
                 </form>
