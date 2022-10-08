@@ -5,50 +5,54 @@ import { Link } from 'react-router-dom'
 
 const Nav = () => {
     return (
-            <div className='navPushDown'>
-                <nav className='navbar is-danger is-fixed-top'>
-                    <div className='navbar-brand'>
-                        <Link to='/' className='navbar-item'>
-                            <FaHeadphonesAlt />
-                            SOUND CITY
-                        </Link>
+        <div className='navPushDown'>
+            <nav className='navbar is-danger is-fixed-top'>
+                <div className='navbar-brand'>
+                    <Link to='/' className='navbar-item'>
+                        <FaHeadphonesAlt />
+                        SOUND CITY
+                    </Link>
 
-
-                    </div>
-                    <div id='navbarBasicExample' className='navbar-menu'>
-                        <div className="navbar-end">
-                            <div className="navbar-item">
-                                <div className="buttons">
-                                        <div className="button is-light">
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div id='navbarBasicExample' className='navbar-menu'>
+                    <div className="navbar-end">
+                        <div className="navbar-item">
+                            <div className="buttons">
+                                <div className="button is-light">
                                     <Link to='/login'>
-                                            <div className='icon is-small'>
+                                        <div className='icon is-small'>
 
-                                                <FaUser />
-
-                                            </div>
-                                            <strong>Login</strong>
-                                    </Link>
+                                            <FaUser />
 
                                         </div>
+                                        <strong>Login</strong>
+                                    </Link>
 
-                                    <div>
-                                    </div>
+                                </div>
 
-                                    <div className='button is-light'>
-                                        <Link to='/cart/id?'>
+                                <div>
+                                </div>
+
+                                <div className='button is-light'>
+                                    <Link to='/cart/id?'>
 
                                         <div className='icon is-small'>
                                             <FaShoppingCart />
                                         </div>
                                         <strong>Cart</strong>
-                                        </Link>
-                                    </div>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </nav>
-            </div>
+                </div>
+            </nav>
+        </div>
     )
 }
 
