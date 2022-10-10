@@ -1,6 +1,6 @@
 import React from "react";
 
-function Message({children}) {
+function ErrorMessage({children}) {
     return (
         <div>
             <div class="notification is-danger">
@@ -11,4 +11,4 @@ function Message({children}) {
     )
 }
 
-export default Message
+export default ErrorMessage

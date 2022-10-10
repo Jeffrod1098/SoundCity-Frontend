@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { listProducts } from '../actions/productActions.js'
 import Loader from '../components/Loader.js'
-import Message from '../components/Message.js'
+import ErrorMessage from '../components/ErrorMessage.js'
 
 const HomePage = () => {
     const dispatch = useDispatch()
@@ -19,7 +19,7 @@ const HomePage = () => {
 
     return(
         <div>
-            {loading? <Loader/> : error ? <Message>{error}</Message>: <Product products={products}/>}
+            {loading? <Loader/> : error ? <ErrorMessage>{error}</ErrorMessage>: <Product products={products}/>}
         </div>
         
     )
