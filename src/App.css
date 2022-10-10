@@ -46,3 +46,7 @@
 .card{
   margin-bottom: 2%;
 }
+
+.bulma-loader-mixin {
+  @include loader;
+}
