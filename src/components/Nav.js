@@ -2,6 +2,7 @@ import { FaTshirt, FaShoppingCart, FaHeadphonesAlt, FaUser } from 'react-icons/f
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
+import { logout } from '../actions/userActions'
 
 
 const Nav = () => {
@@ -9,8 +10,10 @@ const Nav = () => {
     const userLogin = useSelector(state => state.userLogin)
     const { userInfo } = userLogin
     const logoutHandler = () => {
-        console.log('logout')
+        dispatch(logout())
     }
+
+    const dispatch = useDispatch()
 
     return (
         <div className='navPushDown'>
@@ -36,8 +39,8 @@ const Nav = () => {
                                     {userInfo ? (
                                         <div class="dropdown is-hoverable">
                                             <div class="dropdown-trigger">
-                                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
-                                                    <span>{userInfo.name}</span>
+                                                <button class="button is-light" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                                    <span><strong>{userInfo.name}</strong></span>
                                                     <span class="icon is-small">
                                                         <i class="fas fa-angle-down" aria-hidden="true"></i>
                                                     </span>
