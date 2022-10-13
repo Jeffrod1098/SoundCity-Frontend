@@ -47,9 +47,9 @@ const LoginPage = () => {
             <div className="container has-text-centered box" style={{ maxWidth: '300px' }}>
                 <form onSubmit={onSubmitHandler}>
                     <div className="field">
-                        <label className="label" >Username</label>
+                        <label className="label" >Email</label>
                         <div className="control">
-                            <input className="input" name="username" type="email" placeholder="Enter Email" required onChange={e => setEmail(e.target.value)} />
+                            <input className="input" name="Email" type="email" placeholder="Enter Email" required onChange={e => setEmail(e.target.value)} />
                         </div>
                     </div>
 
