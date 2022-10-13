@@ -8,7 +8,7 @@ import ProductPage from './pages/ProductPage.js'
 import {Route, Routes, Link} from 'react-router-dom'
 import CartPage from './pages/CartPage';
 import LoginPage from './pages/LoginPage';
-
+import RegisterPage from './pages/RegisterPage';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
           <Route path='/product/:id' element={<ProductPage/>} />
           <Route path='/cart/:id' element ={<CartPage/>} />
           <Route path='/login' element={<LoginPage/>} />
+          <Route path='/register' element={<RegisterPage/>}/>
         </Routes>
       </main>
       {/* <Footer /> */}

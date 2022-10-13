@@ -12,9 +12,6 @@ import { useNavigate } from "react-router-dom"
 
 const LoginPage = () => {
 
-    // const history = createBrowserHistory()
-    // const history = unstable_HistoryRouter()
-
     const location = useLocation()
     const navigate = useNavigate()
 
