@@ -68,7 +68,7 @@ const LoginPage = () => {
                 </form>
 
             </div>
-            <Link to={redirect ? `register?redirect=${redirect}` : '/register'}>
+            <Link to='/register'>
             <div className="has-text-centered">Click here to register</div>            
             </Link>
 

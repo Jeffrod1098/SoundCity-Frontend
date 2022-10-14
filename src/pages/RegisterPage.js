@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux"
 import { register } from "../actions/userActions"
 import { useLocation } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
+import ErrorMessage from "../components/ErrorMessage";
+import Loader from "../components/Loader";
 
 
 const RegisterPage = () => {
@@ -86,6 +88,9 @@ const RegisterPage = () => {
 
                 </div>
             </div>
+            {message && <ErrorMessage>{message}</ErrorMessage>}
+            {error && <ErrorMessage>{error}</ErrorMessage>}
+            {loading && <Loader/> }
         </div>
     )
 }
