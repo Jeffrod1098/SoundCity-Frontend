@@ -54,7 +54,7 @@ const ProfilePage = () => {
                 setEmail(user.email)
             }
         }
-    }, [dispatch, userInfo, user])
+    }, [dispatch,redirect, userInfo, user])
 
     return (
         <div>

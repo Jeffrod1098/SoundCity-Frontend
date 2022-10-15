@@ -22,7 +22,7 @@ function App() {
           <Route path='/cart/:id' element ={<CartPage/>} />
           <Route path='/login' element={<LoginPage/>} />
           <Route path='/register' element={<RegisterPage/>}/>
-          <Route path='/profile' elment={<ProfilePage/>}/>
+          <Route path='/profile' element={<ProfilePage/>}/>
         </Routes>
       </main>
       {/* <Footer /> */}

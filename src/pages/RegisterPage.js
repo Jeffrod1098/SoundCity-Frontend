@@ -83,7 +83,7 @@ const RegisterPage = () => {
 
                         <div className="field">
                             <div className="control buttons is-centered">
-                                <input className="button is-medium is-info is-fullwidth" type="submit" value="REGISTER" />
+                                <input className="button is-medium is-info is-fullwidth" type="submit" value="UPDATE" />
                             </div>
                         </div>
                     </form>
