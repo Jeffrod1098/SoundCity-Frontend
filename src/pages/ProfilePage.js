@@ -74,27 +74,27 @@ const ProfilePage = () => {
                         <div className="field">
                             <label className="label" >Email</label>
                             <div className="control">
-                                <input className="input" name="username" type="email" placeholder="Enter Email" required onChange={e => setEmail(e.target.value)} />
+                                <input className="input" name="username" type="email" placeholder="Enter Email" value={email} required onChange={e => setEmail(e.target.value)} />
                             </div>
                         </div>
 
                         <div className="field">
-                            <label className="label" >Password</label>
+                            <label className="label" >Update Password</label>
                             <div className="control">
-                                <input className="input" name="password" type="password" placeholder="Enter Password" required onChange={e => setPassword(e.target.value)} />
+                                <input className="input" name="password" type="password" placeholder="Enter New Password" required onChange={e => setPassword(e.target.value)} />
                             </div>
                         </div>
 
                         <div className="field">
-                            <label className="label" >Confirm Password</label>
+                            <label className="label" >Confirm Updated Password</label>
                             <div className="control">
-                                <input className="input" name="confirmPassword" type="password" placeholder="Confirm Password" required onChange={e => setConfirmPassword(e.target.value)} />
+                                <input className="input" name="confirmPassword" type="password" placeholder="Confirm New Password" required onChange={e => setConfirmPassword(e.target.value)} />
                             </div>
                         </div>
 
                         <div className="field">
                             <div className="control buttons is-centered">
-                                <input className="button is-medium is-info is-fullwidth" type="submit" value="REGISTER" />
+                                <input className="button is-medium is-info is-fullwidth" type="submit" value="UPDATE" />
                             </div>
                         </div>
                     </form>
