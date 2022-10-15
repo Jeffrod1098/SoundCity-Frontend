@@ -5,7 +5,7 @@ import {createStore} from 'redux'
 import {productListReducer} from './reducers/productReducers'
 import { productDetailReducer } from './reducers/productReducers'
 import { cartReducer } from './reducers/cartReducers'
-import { userLoginReducer, userRegisterReducer } from './reducers/userReducer'
+import { userLoginReducer, userRegisterReducer, userDetailsReducer } from './reducers/userReducer'
 
 const reducer = combineReducers({
     productList: productListReducer,
@@ -13,7 +13,7 @@ const reducer = combineReducers({
     cart : cartReducer,
     userLogin : userLoginReducer,
     userRegister : userRegisterReducer,
-
+    userDetails : userDetailsReducer,
 })
 
 const cartItemsFromStorage = localStorage.getItem('cartItems') ?
