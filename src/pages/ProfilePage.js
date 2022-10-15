@@ -67,7 +67,7 @@ const ProfilePage = () => {
                     <div className="field">
                             <label className="label" >Name</label>
                             <div className="control">
-                                <input className="input" name="name" type="name" placeholder="Enter Name" required onChange={e => setName(e.target.value)} />
+                                <input className="input" name="name" type="name" placeholder="Enter Name" value={name} required onChange={e => setName(e.target.value)} />
                             </div>
                         </div>
 
