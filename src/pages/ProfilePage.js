@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom"
 import ErrorMessage from "../components/ErrorMessage";
 import Loader from "../components/Loader";
 import { getUserDetails, updateUserProfile } from "../actions/userActions";
+import { USER_UPDATE_PROFILE_RESET } from "../constants/userConstants";
 
 const ProfilePage = () => {
     const location = useLocation()
@@ -23,7 +24,7 @@ const ProfilePage = () => {
 
     const onSubmitHandler = (e) => {
         e.preventDefault()
-        if(password!= confirmPassword){
+        if(password != confirmPassword){
             setMessage('Passwords do not match')
         }else{
             dispatch(updateUserProfile({'id': user.id, 'name' : name, 'email' : email, 'password': password}))
@@ -50,7 +51,10 @@ const ProfilePage = () => {
         if(!userInfo){
             navigate(redirect)
         }else {
-            if(!user || !user.name){
+            if(!user || !user.name || success){
+                dispatch({
+                    type: USER_UPDATE_PROFILE_RESET
+                })
                 dispatch(getUserDetails('profile'))
             }else{
                 setName(user.name)
@@ -84,14 +88,14 @@ const ProfilePage = () => {
                         <div className="field">
                             <label className="label" >Update Password</label>
                             <div className="control">
-                                <input className="input" name="password" type="password" placeholder="Enter New Password" required onChange={e => setPassword(e.target.value)} />
+                                <input className="input" name="password" type="password" placeholder="Enter New Password" onChange={e => setPassword(e.target.value)} />
                             </div>
                         </div>
 
                         <div className="field">
                             <label className="label" >Confirm Updated Password</label>
                             <div className="control">
-                                <input className="input" name="confirmPassword" type="password" placeholder="Confirm New Password" required onChange={e => setConfirmPassword(e.target.value)} />
+                                <input className="input" name="confirmPassword" type="password" placeholder="Confirm New Password"  onChange={e => setConfirmPassword(e.target.value)} />
                             </div>
                         </div>
 
