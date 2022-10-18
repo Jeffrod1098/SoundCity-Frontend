@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import ErrorMessage from "../components/ErrorMessage";
 import Loader from "../components/Loader";
-import { getUserDetails } from "../actions/userActions";
+import { getUserDetails, updateUserProfile } from "../actions/userActions";
 
 const ProfilePage = () => {
     const location = useLocation()
@@ -26,7 +26,7 @@ const ProfilePage = () => {
         if(password!= confirmPassword){
             setMessage('Passwords do not match')
         }else{
-            console.log('Update profile')
+            dispatch(updateUserProfile({'id': user.id, 'name' : name, 'email' : email, 'password': password}))
         }
 
     }
@@ -42,6 +42,9 @@ const ProfilePage = () => {
     const userLogin = useSelector(state => state.userLogin)
     const { userInfo } = userLogin
 
+    const userUpdateProfile = useSelector(state => state.userUpdateProfile)
+    const { success } = userUpdateProfile
+
 
     useEffect(() => {
         if(!userInfo){
@@ -54,7 +57,7 @@ const ProfilePage = () => {
                 setEmail(user.email)
             }
         }
-    }, [dispatch,redirect, userInfo, user])
+    }, [dispatch,redirect, userInfo, user, success])
 
     return (
         <div>
