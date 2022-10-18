@@ -28,6 +28,7 @@ const ProfilePage = () => {
             setMessage('Passwords do not match')
         }else{
             dispatch(updateUserProfile({'id': user.id, 'name' : name, 'email' : email, 'password': password}))
+            setMessage('')
         }
 
     }
